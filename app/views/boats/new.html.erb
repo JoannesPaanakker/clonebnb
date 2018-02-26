@@ -1,0 +1,9 @@
+<h1>New boat</h1>
+
+
+<%= simple_form_for (@boat) do |b| %>
+  <%= b.input :name %>
+  <%= b.input :nr_of_guests %>
+  <%= b.input :nr_of_rooms %>
+  <%= b.submit "Add", class: "btn btn-primary" %>
+<% end %>

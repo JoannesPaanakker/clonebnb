@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# boats = Boat.create([{name: 'Andante'}, {name: 'Witte Walvis'}, {name: 'BU 68'}])

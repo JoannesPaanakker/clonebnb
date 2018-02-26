@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  review_rating: MyString
+  review_description: MyString
+  cancelled: false
+  start_date: 2018-02-26
+  end_date: 2018-02-26
+  user: one
+  boat: one
+
+two:
+  review_rating: MyString
+  review_description: MyString
+  cancelled: false
+  start_date: 2018-02-26
+  end_date: 2018-02-26
+  user: two
+  boat: two
