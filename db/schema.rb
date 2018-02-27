@@ -53,10 +53,6 @@ ActiveRecord::Schema.define(version: 20180227101411) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.string "first_name"
-    t.string "laste_name"
-    t.string "language"
-    t.string "currency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
