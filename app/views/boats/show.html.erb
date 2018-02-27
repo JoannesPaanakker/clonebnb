@@ -1,21 +1,26 @@
 <h1><%= @boat.name %></h1>
 
 <div class="box">
-  <%= @boat.name %>
+ Boat Name: <%= @boat.name %>
+<br>
+<br>
+  User ID: <%= @boat.user %>
+<br>
+<br>
+  Description: <%= @boat.description %>
+<br>
+<br>
+  Guests: <%= @boat.nr_of_guests %>
+<br>
+<br>
+  Rooms: <%= @boat.nr_of_rooms %>
+<br>
+<br>
+  Price per day: <%= @boat.price_per_day %>
 </div>
 
 <br>
+<br>
+<br>
 
-<!-- <ul>
-<%# @boat.reviews.each do |rev| %>
-<li>
-  <%= rev.content %>, <%= rev.rating %>
-</li>
-<%# end %>
-</ul> -->
-<br>
-<br>
-<!-- <%=# link_to "Add review", new_restaurant_review_path %>
-<br>
--->
 <p> <%= link_to "Back to list", boats_path %></p>
