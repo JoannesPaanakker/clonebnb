@@ -10,7 +10,7 @@ class BoatsController < ApplicationController
     @boat = Boat.new(boat_params)
     @boat.user = current_user
     authorize @boat
-    @restaurant.save
+    @boat.save
     redirect_to boats_path
   end
 

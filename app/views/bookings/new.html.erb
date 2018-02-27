@@ -1,0 +1,10 @@
+<h1>New Booking</h1>
+
+<%= simple_form_for [@boat, @booking] do |book| %>
+  <%= book.input :start_date %>
+  <%= book.input :end_date %>
+<!-- f.input :rating, collection: [0, 1, 2, 3, 4, 5] -->
+  <%= book.submit "Confirm Booking", class: "btn btn-primary" %>
+
+<% end %>
+

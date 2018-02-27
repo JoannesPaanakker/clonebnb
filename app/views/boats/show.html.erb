@@ -19,8 +19,15 @@
   Price per day: <%= @boat.price_per_day %>
 </div>
 
-<br>
-<br>
+<ul>
+<% @boat.bookings.each do |book| %>
+<li>
+  <%= book.start_date %>, <%= book.end_date %>
+</li>
+<% end %>
+</ul>
 <br>
 
+<p> <%= link_to "Book!", new_boat_booking_path(@boat) %></p>
 <p> <%= link_to "Back to list", boats_path %></p>
+<p> <%= link_to "logout", destroy_user_session_path, method: :delete %></p>
