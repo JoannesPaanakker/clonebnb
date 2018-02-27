@@ -4,8 +4,14 @@
 <% @boats.each do |boat| %>
 <li>
   <%= boat.name %>
+  <%= boat.photo %>
+  <%= boat.description %>
+  <%= boat.nr_of_guests %>
+  <%= boat.nr_of_rooms %>
   <%= link_to "#{boat.name}", boat_path(boat) %>
+
 </li>
 <% end %>
 </ul>
 <%= link_to "Add new boat", new_boat_path %>
+
