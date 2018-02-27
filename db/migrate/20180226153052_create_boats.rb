@@ -6,6 +6,7 @@ class CreateBoats < ActiveRecord::Migration[5.1]
       t.integer :nr_of_rooms
       t.string :photo
       t.text :description
+      t.integer :price_per_day, default: 100
       t.references :user, foreign_key: true
 
       t.timestamps

@@ -1,21 +1,27 @@
 class BoatsController < ApplicationController
 
+
   def index
-    @boats = Boat.all
+    # @boats = Boat.all
+    @boats = policy_scope(Boat).order(created_at: :desc)
   end
 
   def create
     @boat = Boat.new(boat_params)
+    @boat.user = current_user
+    authorize @boat
     @restaurant.save
     redirect_to boats_path
   end
 
   def new
     @boat = Boat.new
+    authorize @boat
   end
 
   def show
     @boat = Boat.find(params[:id])
+    authorize @boat
   end
 
   private
