@@ -19,14 +19,26 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def show
-    @booking = booking.find(params[:id])
+  # def show
+  #   @booking = Booking.find(params[:id])
+  #   authorize @booking
+  # end
+
+  def edit
+    @booking = Booking.find(params[:id])
     authorize @booking
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    authorize @booking
+    redirect_to boat_path(@booking.boat)
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:description, :review_rating, :cancelled, :start_date, :end_date, :boat_id)
+    params.require(:booking).permit(:review_description, :review_rating, :cancelled, :start_date, :end_date, :boat_id)
   end
 end
