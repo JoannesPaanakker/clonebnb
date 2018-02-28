@@ -1,17 +1,27 @@
-<h1>Boats</h1>
 
+<h1 align="center">Boats</h1>
 <ul>
-<% @boats.each do |boat| %>
-<li>
-  <%= boat.name %>
-  <%= boat.photo %>
-  <%= boat.description %>
-  <%= boat.nr_of_guests %>
-  <%= boat.nr_of_rooms %>
-  <%= link_to "#{boat.name}", boat_path(boat) %>
 
-</li>
-<% end %>
+  <div class="container">
+    <div class="row">
+      <% @boats.each do |boat| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("Attessa-IV.jpg") %>');">
+          <div class="card-category">Luxury</div>
+          <div class="card-description">
+            <h2><%= boat.name %></h2>
+            <p>Great boat to rent</p>
+          </div>
+          <div class="card-link">
+          <%= link_to "Book This", boat_path(boat) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
 </ul>
+<div class = "add-boat">
 <%= link_to "Add new boat", new_boat_path %>
 
+</div>
