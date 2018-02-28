@@ -2,35 +2,40 @@
 
 <div class="box">
  Boat Name: <%= @boat.name %>
-<br>
-<br>
-  User ID: <%= @boat.user %>
-<br>
-<br>
-  Description: <%= @boat.description %>
-<br>
-<br>
-  Guests: <%= @boat.nr_of_guests %>
-<br>
-<br>
-  Rooms: <%= @boat.nr_of_rooms %>
-<br>
-<br>
-  Price per day: <%= @boat.price_per_day %>
+ <br>
+ <br>
+ User ID: <%= @boat.user %>
+ <br>
+ <br>
+ Description: <%= @boat.description %>
+ <br>
+ <br>
+ Guests: <%= @boat.nr_of_guests %>
+ <br>
+ <br>
+ Rooms: <%= @boat.nr_of_rooms %>
+ <br>
+ <br>
+ Price per day: <%= @boat.price_per_day %>
 </div>
 
 <div
 
-  id="map" style="width: 50%; height: 200px;" data-markers="<%= @markers.to_json %>">
+id="map" style="width: 50%; height: 200px;" data-markers="<%= @markers.to_json %>">
 
 </div>
 
-<ul>
-<% @boat.bookings.each do |book| %>
-<li>
-  <%= book.start_date %>, <%= book.end_date %>
-</li>
-<% end %>
+<ul class="bookings-details">
+  <h2>Booking Details</h2>
+  <% @boat.bookings.each do |book| %>
+  <li>
+    User: <%= book.user.first_name %> <%= book.user.last_name %> <br>
+    Period: <%= book.start_date %>, <%= book.end_date %> <br>
+    Review Rating: <%= book.review_rating %> <br>
+    User Comment: <%= book.review_description %> <br>
+    <%= link_to "Add Review", edit_booking_path(book) %>
+  </li>
+  <% end %>
 </ul>
 <br>
 

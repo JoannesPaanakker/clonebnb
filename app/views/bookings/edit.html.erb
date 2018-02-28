@@ -1,0 +1,16 @@
+<h1>Add Review</h1>
+
+<%= simple_form_for(@booking) do |b| %>
+  <%= b.error_notification %>
+
+  <div class="form-inputs">
+    <%= b.input :review_description %>
+    <%= b.input :review_rating, :collection => 1..6%>
+  </div>
+
+  <div class="form-actions">
+    <%= b.button :submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', boat_path %>
