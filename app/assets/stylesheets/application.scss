@@ -14,3 +14,21 @@
 @import "components/index";
 // @import "components/navbar";
 @import "pages/index";
+@import "pages/log-in";
+@import "pages/footer";
+
+// .wrapper {
+
+// height: 100vh;
+// background-size: cover !important;
+// }
+
+.site {
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+}
+
+.site-content {
+ flex: 1;
+}
