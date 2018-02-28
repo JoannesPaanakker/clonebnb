@@ -24,9 +24,9 @@ users = User.create([
   ])
 
 boats = Boat.create([
-  {name: 'Andante II', nr_of_rooms: 4, nr_of_guests: 10, price_per_day: 600, description: "Lots of text", user: users.first},
-  {name: 'Andante III', nr_of_rooms: 1, nr_of_guests: 2, price_per_day: 200,description: "More text", user: users[1]},
-  {name: 'Andante IV', nr_of_rooms: 7, nr_of_guests: 22, price_per_day: 950,description: "Big is beautiful of text", user: users[2]}
+  {name: 'Andante II', nr_of_rooms: 4, nr_of_guests: 10, price_per_day: 600, description: "Lots of text", user: users.first, address: "Kennemerboulevard 540, IJmuiden"},
+  {name: 'Andante III', nr_of_rooms: 1, nr_of_guests: 2, price_per_day: 200,description: "More text", user: users[1], address: "De Ruyterplein 1, Vlissingen"},
+  {name: 'Andante IV', nr_of_rooms: 7, nr_of_guests: 22, price_per_day: 950,description: "Big is beautiful of text", user: users[2], address: "Jadchthavenlaan 3, Leeuwarden"}
   ])
 
 dates = []

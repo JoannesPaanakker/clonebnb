@@ -19,6 +19,12 @@
   Price per day: <%= @boat.price_per_day %>
 </div>
 
+<div
+
+  id="map" style="width: 50%; height: 200px;" data-markers="<%= @markers.to_json %>">
+
+</div>
+
 <ul>
 <% @boat.bookings.each do |book| %>
 <li>
