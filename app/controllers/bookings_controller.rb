@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.boat_id = params[:boat_id]
     authorize @booking
     @booking.save
-    redirect_to boats_path
+    redirect_to boat_path(@booking.boat_id)
   end
 
   def new

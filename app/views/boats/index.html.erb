@@ -6,14 +6,24 @@
     <div class="row">
       <% @boats.each do |boat| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path("Attessa-IV.jpg") %>');">
+        <% if boat.photo.present? %>
+        <% image = cl_image_path boat.photo, height: 300, width: 400, crop: :fill %>
+        <% else %>
+        <% image = image_path 'yacht.png' %>
+        <% end %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image %>')">
           <div class="card-category">Luxury</div>
           <div class="card-description">
             <h2><%= boat.name %></h2>
             <p>Great boat to rent</p>
+<!--             <span>
+
+            </span> -->
           </div>
           <div class="card-link">
-          <%= link_to "Book This", boat_path(boat) %>
+              <%= link_to boat_path(boat) do %>
+              <p> Details and Booking </p>
+              <% end  %>
           </div>
         </div>
       </div>

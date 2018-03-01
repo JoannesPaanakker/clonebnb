@@ -17,6 +17,10 @@
  <br>
  <br>
  Price per day: <%= @boat.price_per_day %>
+<br>
+<%= cl_image_tag(@boat.photo,
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
 </div>
 
 <div

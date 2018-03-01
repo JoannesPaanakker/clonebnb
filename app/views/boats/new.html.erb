@@ -3,7 +3,12 @@
 
 <%= simple_form_for (@boat) do |b| %>
   <%= b.input :name %>
+  <%= b.input :description %>
   <%= b.input :nr_of_guests %>
   <%= b.input :nr_of_rooms %>
+  <%= b.input :price_per_day %>
+  <%= b.input :address %>
+  <%= b.input :photo %>
+  <%= b.input :photo_cache, as: :hidden %>
   <%= b.submit "Add", class: "btn btn-primary" %>
 <% end %>
