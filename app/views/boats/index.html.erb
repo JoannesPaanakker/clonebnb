@@ -4,6 +4,12 @@
 
   <div class="container">
     <div class="row">
+      <%= form_tag boats_path, method: :get do %>
+      <%= text_field_tag(:query, params[:query], { class: 'form-control', placeholder: "Search for a boat..." }) %>
+      <%= submit_tag "Search!" %>
+      <% end %>
+    </div>
+    <div class="row">
       <% @boats.each do |boat| %>
       <div class="col-xs-12 col-sm-4">
         <% if boat.photo.present? %>
@@ -18,20 +24,20 @@
             <p>Great boat to rent</p>
 <!--             <span>
 
-            </span> -->
-          </div>
-          <div class="card-link">
-              <%= link_to boat_path(boat) do %>
-              <p> Details and Booking </p>
-              <% end  %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    </div>
-  </div>
+</span> -->
+</div>
+<div class="card-link">
+  <%= link_to boat_path(boat) do %>
+  <p> Details and Booking </p>
+  <% end  %>
+</div>
+</div>
+</div>
+<% end %>
+</div>
+</div>
 </ul>
 <div class = "add-boat">
-<%= link_to "Add new boat", new_boat_path %>
+  <%= link_to "Add new boat", new_boat_path %>
 
 </div>
