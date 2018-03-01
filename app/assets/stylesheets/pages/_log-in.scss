@@ -3,6 +3,7 @@
   background-size: cover !important;
   font-family: Montserrat;
   height: 100vh;
+  position: relative;
 }
 
 // body {
@@ -21,7 +22,9 @@
 }
 
 .login-block {
-
+    position: absolute;
+    top: 20vh;
+    right: calc(50vw - 160px);
     width: 320px;
     padding: 20px;
     background: #fff;
