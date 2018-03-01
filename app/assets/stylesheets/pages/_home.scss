@@ -79,7 +79,6 @@
 }
 
 
-
 .new-boat-page {
   // height: 100vh;
   // position: relative;
@@ -87,3 +86,26 @@
   // background-size: cover;
 }
 
+.btn-submit {
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.5s ease;
+  border-radius: 50px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.btn-submit:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+// .background {
+//   background-color: black;
+//   opacity: 0.5;
+// }
