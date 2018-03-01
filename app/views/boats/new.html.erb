@@ -1,9 +1,18 @@
-<h1>New boat</h1>
-
-
-<%= simple_form_for (@boat) do |b| %>
-  <%= b.input :name %>
-  <%= b.input :nr_of_guests %>
-  <%= b.input :nr_of_rooms %>
-  <%= b.submit "Add", class: "btn btn-primary" %>
-<% end %>
+<div class="banner new-boat-page">
+  <!-- <div class="add-boat"> -->
+    <div class="add-boat-block">
+      <h1>Add your boat</h1>
+      <%= form_for(@boat) do |f| %>
+      <%= f.text_field :name, required: false, autofocus: true, placeholder: "name" %>
+      <%= f.input :description %>
+      <%= f.text_field :nr_of_guests, required: false, placeholder: "guests" %>
+      <%= f.text_field :nr_of_rooms, required: false, placeholder: "rooms" %>
+      <%= f.input :price_per_day %>
+      <%= f.input :address %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %> 
+      <%= f.button :submit %>
+      <% end %>
+    <!-- </div> -->
+  </div>
+</div>

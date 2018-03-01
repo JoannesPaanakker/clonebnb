@@ -23,11 +23,28 @@ users = User.create([
   {email: 'test8@test.com', first_name: 'Jonathan', last_name: 'Doel', password: '123456'}
   ])
 
-boats = Boat.create([
-  {name: 'Andante II', nr_of_rooms: 4, nr_of_guests: 10, price_per_day: 600, description: "Lots of text", user: users.first, address: "Kennemerboulevard 540, IJmuiden"},
-  {name: 'Andante III', nr_of_rooms: 1, nr_of_guests: 2, price_per_day: 200,description: "More text", user: users[1], address: "De Ruyterplein 1, Vlissingen"},
-  {name: 'Andante IV', nr_of_rooms: 7, nr_of_guests: 22, price_per_day: 950,description: "Big is beautiful of text", user: users[2], address: "Jadchthavenlaan 3, Leeuwarden"}
-  ])
+# boats = Boat.create([
+#   {name: 'Andante II', nr_of_rooms: 4, nr_of_guests: 10, price_per_day: 600, description: "Lots of text", user: users.first, address: "Kennemerboulevard 540, IJmuiden", photo: "image/upload/v1519905434/andanteII.jpg"},
+#   {name: 'Andante III', nr_of_rooms: 1, nr_of_guests: 2, price_per_day: 200,description: "More text", user: users[1], address: "De Ruyterplein 1, Vlissingen", photo: "http://res.cloudinary.com/qed-app-development-bv/image/upload/v1519906551/w9ahseyz0tszffgt6uvr.jpg"},
+#   {name: 'Andante IV', nr_of_rooms: 7, nr_of_guests: 22, price_per_day: 950,description: "Big is beautiful of text", user: users[2], address: "Jadchthavenlaan 3, Leeuwarden", photo: "image/upload/v1519906129/AndanteIV.jpg"}
+#     {name: 'Andante IV', nr_of_rooms: 7, nr_of_guests: 22, price_per_day: 950,description: "Big is beautiful of text", user: users[2], address: "Jadchthavenlaan 3, Leeuwarden", photo: "image/upload/v1519907729/cpyq41bsuxwcrsnjlnff.jpg"}
+#   ])
+boats = []
+
+boat = Boat.new(name: 'Andante II', nr_of_rooms: 4, nr_of_guests: 10, price_per_day: 600, description: "Lots of text", user: users.first, address: "Kennemerboulevard 540, IJmuiden")
+boat.remote_photo_url = "http://res.cloudinary.com/qed-app-development-bv/image/upload/v1519906129/AndanteII.jpg"
+boat.save
+boats << boat
+
+boat = Boat.new(name: 'Andante III', nr_of_rooms: 1, nr_of_guests: 2, price_per_day: 200,description: "More text", user: users[1], address: "De Ruyterplein 1, Vlissingen")
+boat.remote_photo_url = "http://res.cloudinary.com/qed-app-development-bv/image/upload/v1519906129/AndanteIII.jpg"
+boat.save
+boats << boat
+
+boat = Boat.new(name: 'Andante IV', nr_of_rooms: 7, nr_of_guests: 22, price_per_day: 950,description: "Big is beautiful of text", user: users[2], address: "Jadchthavenlaan 3, Leeuwarden")
+boat.remote_photo_url = "http://res.cloudinary.com/qed-app-development-bv/image/upload/v1519906129/AndanteIV.jpg"
+boat.save
+boats << boat
 
 dates = []
 day = 2
