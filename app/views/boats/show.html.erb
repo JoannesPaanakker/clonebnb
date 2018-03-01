@@ -1,44 +1,49 @@
-<h1><%= @boat.name %></h1>
+<h1 class="boat-title"><%= @boat.name %></h1>
 
-<div class="box">
- Boat Name: <%= @boat.name %>
- <br>
- <br>
- User ID: <%= @boat.user %>
- <br>
- <br>
- Description: <%= @boat.description %>
- <br>
- <br>
- Guests: <%= @boat.nr_of_guests %>
- <br>
- <br>
- Rooms: <%= @boat.nr_of_rooms %>
- <br>
- <br>
- Price per day: <%= @boat.price_per_day %>
+<div class="container">
+  <div class="col">
+    <div class="col-lg-4">
+      <p><strong>Boat name:</strong> <%= @boat.name %></p>
+      <p><strong>User ID:</strong> <%= @boat.user %></p>
+      <p><strong>Description</strong> <%= @boat.description %></p>
+      <p><strong>Guests</strong>: <%= @boat.nr_of_guests %></p>
+      <p><strong>Rooms:</strong> <%= @boat.nr_of_rooms %></p>
+      <p><strong>Price per day:</strong> <%= @boat.price_per_day %></p>
+    </div>
+  </div>
+
+  <div class="col-lg-4"> <p> Picture</p></div>
+
+
+  <div class="col-lg-4">
+    <div id="map" style="width: 100%; height: 250px; padding-top: 100px" data-markers="<%= @markers.to_json %>"></div>
+  </div>
 </div>
 
-<div
-
-id="map" style="width: 50%; height: 200px;" data-markers="<%= @markers.to_json %>">
-
+<div class="container">
+  <div class="booking-details">
+    <div class="col-lg-4">
+      <ul>
+        <h2>Booking Details</h2>
+        <% @boat.bookings.each do |book| %>
+        <li>
+          User: <%= book.user.first_name %> <%= book.user.last_name %> <br>
+          Period: <%= book.start_date %>, <%= book.end_date %> <br>
+          Review Rating: <%= book.review_rating %> <br>
+          User Comment: <%= book.review_description %> <br>
+          <%= link_to "Add Review", edit_booking_path(book) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
-
-<ul class="bookings-details">
-  <h2>Booking Details</h2>
-  <% @boat.bookings.each do |book| %>
-  <li>
-    User: <%= book.user.first_name %> <%= book.user.last_name %> <br>
-    Period: <%= book.start_date %>, <%= book.end_date %> <br>
-    Review Rating: <%= book.review_rating %> <br>
-    User Comment: <%= book.review_description %> <br>
-    <%= link_to "Add Review", edit_booking_path(book) %>
-  </li>
-  <% end %>
-</ul>
 <br>
 
-<p> <%= link_to "Book!", new_boat_booking_path(@boat) %></p>
+<div>
+  <button class="btn button">
+  <%= link_to "Book!", new_boat_booking_path(@boat) %>
+</button>
 <p> <%= link_to "Back to list", boats_path %></p>
 <p> <%= link_to "logout", destroy_user_session_path, method: :delete %></p>
+</div>

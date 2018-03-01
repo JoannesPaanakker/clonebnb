@@ -1,0 +1,50 @@
+.boat-container {
+  border: 1px lightgrey;
+  padding-left: 10px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: snow;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+h1 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.map {
+  margin-left: 20px;
+  padding-top: 100px;
+}
+
+
+.boat-title {
+  display: flex;
+  color: #111;
+  font-weight: bold;
+  justify-content: left;
+  padding-left: 20px;
+  padding-bottom: 10px
+}
+
+.booking-details {
+  display: flex;
+  list-style-type: none;
+  ul {
+    padding-left: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+}
