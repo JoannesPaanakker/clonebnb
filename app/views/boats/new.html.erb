@@ -2,17 +2,48 @@
   <!-- <div class="add-boat"> -->
     <div class="add-boat-block">
       <h1>Add your boat</h1>
-      <%= form_for(@boat) do |f| %>
-      <%= f.text_field :name, required: false, autofocus: true, placeholder: "name" %>
-      <%= f.text_field :description %>
-      <%= f.text_field :nr_of_guests, required: false, placeholder: "guests" %>
-      <%= f.text_field :nr_of_rooms, required: false, placeholder: "rooms" %>
-      <%= f.text_field :price_per_day %>
-      <%= f.text_field :address %>
-      <%= f.file_field :photo %>
-      <%= f.text_field :photo_cache, as: :hidden %>
-      <%= f.button :submit %>
-      <% end %>
-    <!-- </div> -->
+      <div class="background">
+        <div class="full-form">
+           <%= form_for(@boat) do |f| %>
+          <div class="form-group form-inline">
+            <%= f.text_field :name, required: false, autofocus: true, placeholder: "Name" %>
+            <%= f.text_field :description  %>
+          </div>
+
+
+          <div class="form-group form-inline">
+
+            <%= f.text_field :nr_of_guests, required: false, placeholder: "Number Of Guests" %>
+            <%= f.text_field :nr_of_rooms, required: false, placeholder: "Rooms Needed" %>
+          </div>
+
+
+          <div class="form-group form-inline">
+
+            <%= f.text_field :price_per_day, required: false, placeholder: "price" %>
+            <%= f.text_field :address %>
+          </div>
+
+          <div class="form-group form-inline">
+
+
+          </div>
+
+          <div class="form-group form-inline">
+
+            <%= f.file_field :photo %>
+          </div>
+          <div class="form-group form-inline">
+
+            <button class="btn-submit"<%= f.button :submit %>
+          </div>
+
+
+
+          <% end %>
+      </div>
+    </div>
+      <!-- </div> -->
+    </div>
   </div>
-</div>
+

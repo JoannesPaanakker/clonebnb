@@ -2,8 +2,11 @@ class BoatsController < ApplicationController
 
 
   def index
-    # @boats = Boat.all
-    @boats = policy_scope(Boat).order(created_at: :desc)
+    if params[:query].present?
+      @boats = policy_scope(Boat).search_by_name_description_and_address(params[:query])
+    else
+      @boats = policy_scope(Boat).order(created_at: :desc)
+    end
   end
 
   def create
