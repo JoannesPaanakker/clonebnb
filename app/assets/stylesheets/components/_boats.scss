@@ -68,12 +68,11 @@ h1 {
 
 
 .btn-back {
-  color: #aaa9a9;
+  color: dimgray;
   border: 1px solid #ada9a9;
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
   transition: background 0.5s ease;
   a {
     text-decoration: none;
@@ -83,5 +82,7 @@ h1 {
 
 .btn-back:hover {
   background-color: #7a7979;
+  opacity: 0.8;
+  color: whitesmoke;
 }
 
