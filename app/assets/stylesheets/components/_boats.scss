@@ -9,6 +9,13 @@
   justify-content: center;
 }
 
+body {
+  background-image: url("Background-boat.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .container {
   padding-top: 20px;
 }
@@ -16,13 +23,8 @@
 h1 {
   padding-top: 10px;
   padding-bottom: 20px;
+  text-align: center;
 }
-
-.map {
-  margin-left: 20px;
-  padding-top: 100px;
-}
-
 
 .boat-title {
   display: flex;
@@ -30,18 +32,24 @@ h1 {
   font-weight: bold;
   justify-content: left;
   padding-left: 20px;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  color: whitesmoke;
 }
 
 .booking-details {
   display: flex;
   list-style-type: none;
+  color: whitesmoke;
   ul {
     padding-left: 0;
   }
   li {
     list-style-type: none;
   }
+}
+
+.info-list {
+  color: whitesmoke;
 }
 
 .btn-book {
@@ -68,20 +76,71 @@ h1 {
 
 
 .btn-back {
+  display: flex;
+  align-item: right;
   color: #aaa9a9;
   border: 1px solid #ada9a9;
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-  transition: background 0.5s ease;
+  opacity: 0.8;
+  transition: background 0.5s ease;  text-align: center;
   a {
     text-decoration: none;
-    color: #ada9a9;
+    color: #474545;
   }
+}
+
+.wrapper {
+  margin-left: 650px;
+  margin-bottom: 10px;
 }
 
 .btn-back:hover {
   background-color: #7a7979;
 }
+
+.picture_map {
+  display: flex;
+}
+
+.photo {
+  margin-right: 25px;
+}
+
+.btn-review {
+  margin-top: 10px;
+  margin-left: 44px;
+  display: flex;
+  align-item: right;
+  color: #3bf786;
+  border: 1px solid #ada9a9;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: all 0.5s ease;  text-align: center;
+  a {
+    text-decoration: none;
+    color: #474545;
+  }
+}
+
+
+.btn-review:hover {
+ background-color: #7a7979;
+ color: whitesmoke;
+ transition: background 0.5s ease;  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
