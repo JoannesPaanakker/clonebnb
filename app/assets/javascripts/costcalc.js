@@ -1,14 +1,14 @@
-function calcBookingCost {
-const calc = document.getElementById('end_date');
+// function calcBookingCost {
+// var calc = document.getElementById('end_date');
 
-calc.addEventListener("blur", {
-  const start = document.getElementById('start_date');
-  // const end = document.getElementById('end_date');
-  const calc2 = parseInt("calc", 10);
-  const start2 = parseInt("start", 10);
-  const days = calc2 - start2;
-  const cost = days * @boat.price_per_day;
-  });
-}
+// calc.addEventListener("blur", {
+//   var start = document.getElementById('start_date');
+//   // var end = document.getElementById('end_date');
+//   var calc2 = parseInt("calc", 10);
+//   var start2 = parseInt("start", 10);
+//   var days = calc2 - start2;
+//   var cost = days * @boat.price_per_day;
+//   });
+// }
 
-calcBookingCost()
+// calcBookingCost()

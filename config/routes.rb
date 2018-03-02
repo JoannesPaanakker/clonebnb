@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # devise_for :users
+  devise_for :users, controllers: { sessions: "sessions" }
+
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :boats do
@@ -9,6 +11,5 @@ Rails.application.routes.draw do
     end
   end
   resources :bookings, only: [:edit, :update]
-  devise_for :users, controllers: { sessions: "sessions" }
   resources :users, only: [:show, :update]
 end
