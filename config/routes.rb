@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:edit, :update]
   devise_for :users, controllers: { sessions: "sessions" }
+  resources :users, only: [:show, :update]
 end
