@@ -76,6 +76,7 @@ h1 {
 
 
 .btn-back {
+  color: dimgray;
   display: flex;
   align-item: right;
   color: #aaa9a9;
@@ -98,6 +99,8 @@ h1 {
 
 .btn-back:hover {
   background-color: #7a7979;
+  opacity: 0.8;
+  color: whitesmoke;
 }
 
 .picture_map {
