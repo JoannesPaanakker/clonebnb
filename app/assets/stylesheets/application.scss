@@ -12,10 +12,12 @@
 // Your CSS partials
 @import "layouts/index";
 @import "components/index";
+@import "components/date_picker";
 // @import "components/navbar";
 @import "pages/index";
 @import "pages/log-in";
 @import "pages/footer";
+@import "pages/edit-user.scss";
 
 // .wrapper {
 
