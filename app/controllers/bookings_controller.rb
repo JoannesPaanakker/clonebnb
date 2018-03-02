@@ -19,6 +19,13 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
+  def cost
+    raise
+    @booking = Booking.new(booking_params)
+    days = @booking.end_date - @booking.start_date
+    @booking.cost = days * @booking.boat.price_per_day
+    render new
+  end
   # def show
   #   @booking = Booking.find(params[:id])
   #   authorize @booking
@@ -39,6 +46,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:review_description, :review_rating, :cancelled, :start_date, :end_date, :boat_id)
+    params.require(:booking).permit(:review_description, :review_rating, :cancelled, :start_date, :end_date, :boat_id, :cost)
   end
 end
