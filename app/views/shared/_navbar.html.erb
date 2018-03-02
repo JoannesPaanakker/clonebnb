@@ -11,7 +11,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "Boats", boats_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My Details", user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
 
 
