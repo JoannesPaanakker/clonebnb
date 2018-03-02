@@ -68,7 +68,11 @@ h1 {
 
 
 .btn-back {
-  color: #aaa9a9;
+  width: 100%;
+  margin: 20px 0;
+  font-weight: bold;
+  color: blue;
+  // color: #aaa9a9;
   border: 1px solid #ada9a9;
   padding: 10px 20px;
   border-radius: 50px;
@@ -79,6 +83,11 @@ h1 {
     text-decoration: none;
     color: #ada9a9;
   }
+}
+
+.my-btn {
+  color: #00004c !important;
+  font-weight: 400;
 }
 
 .btn-back:hover {
