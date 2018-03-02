@@ -56,6 +56,10 @@
     outline: none;
 }
 
+.login-block input[type=submit] {
+  padding-left: 0;
+}
+
 .login-block input#username {
     background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
     background-size: 16px 80px;
