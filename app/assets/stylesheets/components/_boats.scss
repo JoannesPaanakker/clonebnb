@@ -76,8 +76,9 @@ h1 {
 
 
 .btn-back {
-  display: flex;
-  align-item: right;
+  // width: 100%;
+  // display: flex;
+  align-text: center;
   color: #aaa9a9;
   border: 1px solid #ada9a9;
   padding: 10px 20px;
@@ -89,6 +90,16 @@ h1 {
     text-decoration: none;
     color: #474545;
   }
+}
+
+#confirm-button {
+  margin: 0 130px;
+}
+
+#stupid-btn {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center !important;
 }
 
 .my-btn {

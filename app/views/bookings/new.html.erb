@@ -6,15 +6,8 @@
       <%= simple_form_for [@boat, @booking] do |book| %>
       <%= book.input :start_date %>
       <%= book.input :end_date %>
-      <%= book.submit "Confirm Booking", class: "btn-back" %>
+      <%= book.submit "Confirm Booking", class: "btn-back", id: "confirm-button" %>
       <% end %>
     </div>
   </div>
 </div>
-<%= simple_form_for [@boat, @booking] do |book| %>
-  <%= book.input :start_date, id:'start_date' %>
-  <%= book.input :end_date, id:'end_date'%>
-
-
-<%= book.submit "Confirm Booking", class: "btn btn-primary" %>
-<% end %>
