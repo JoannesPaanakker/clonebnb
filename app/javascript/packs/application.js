@@ -8,5 +8,9 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import 'bootstrap';
+import '../plugins/flatpickr';
 console.log('Hello World from Webpacker')
 
+import { calculateCost } from "../bookings/cost";
+
+calculateCost();
