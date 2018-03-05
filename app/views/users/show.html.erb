@@ -1,21 +1,23 @@
 <h1 class="user-title"><%= @user.first_name %> <%= @user.last_name %></h1>
+<div class=all_buttons>
+  <button class="btn-book">
+    <%= link_to "Change User Details", edit_user_registration_path %>
+  </button>
+</div>
 
 <div class="container">
   <div class="col">
     <div class="col-lg-6">
-      <p><strong>User ID:</strong> <%= @user %></p>
       <p><strong>Email</strong> <%= @user.email %></p>
       <p><strong>Language</strong>: <%= @user.language %></p>
       <p><strong>Currency:</strong> <%= @user.currency %></p>
     </div>
   </div>
 
-  <div class="scol-lg-6">
-    <%= cl_image_tag(@user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, radius: :max) %>
+  <div class="col-lg-6">
+    <%= cl_image_tag(@user.photo, width: 150, height: 150, crop: :fill, gravity: :face, radius: 30 ) %>
   </div>
 </div>
-<%= link_to "Change User Details", edit_user_registration_path %>
-
 <div class="container">
   <div class="booking-details">
     <div class="col-lg-4">
@@ -43,7 +45,7 @@
         <% @user.boats.each do |boat| %>
         <li>
           Boat: <%= boat.name %> <br>
-          <%= cl_image_tag(boat.photo, width: 150, height: 150, crop: :thumb, gravity: :face) %>
+          <%= cl_image_tag(boat.photo, width: 150, height: 150, crop: :thumb, gravity: :face ) %>
           <%= link_to "Boat details", boat_path(boat) %>
         </li>
         <% end %>
